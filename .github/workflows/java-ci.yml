@@ -24,11 +24,11 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
 
-      - name: Pull config
-        run: git submodule update --init --recursive
-
       - name: Make script executable
         run: chmod +x gradlew
+
+      - name: Pull config
+        run: git submodule update --init --recursive
 
       - name: Build with Gradle
         run: ./gradlew check
