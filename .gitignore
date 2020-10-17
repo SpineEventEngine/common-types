@@ -49,16 +49,18 @@ gradle-app.setting
 # Cache of project
 .gradletasknamecache
 
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
-
-# Login details to Maven repository.
-# Each workstation should have developer's login defined in this file.
-credentials.tar
-credentials.properties
+## Credentials used by the build
+###################################
+# Login details to CouldRepo Maven repository
 cloudrepo.properties
+# GitHub login, specific to developer's workstation.
+credentials.properties
+# Deploy key for publishing generated documentation via GitHub Pages
 deploy_key_rsa
+# The key for GCloud used by the project for storing build logs.
 gcs-auth-key.json
+# The archive with the above files which after it is encrypted by Travis is kept in VCS.
+credentials.tar
 
 # Log files
 *.log
